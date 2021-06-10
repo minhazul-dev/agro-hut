@@ -4,7 +4,7 @@ const Tab = () => {
     return (
         <div>
             <ul className="nav justify-content-center">
-                <li className="nav-item">
+                <li className="nav-item ">
                     <a className="nav-link active" aria-current="page" href="#">Active</a>
                 </li>
                 <li className="nav-item">

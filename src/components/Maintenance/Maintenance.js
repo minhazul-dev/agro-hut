@@ -1,5 +1,5 @@
 import React from 'react';
-import maintenance from '../assets/images/maintenance/maintenance.png'
+import maintenance from '../assets/images/maintenance/maintenance3.png'
 const Maintenance = () => {
     return (
         <div className="container mb-5">
