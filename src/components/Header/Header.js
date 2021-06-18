@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Header.css"
-import videoBD from '../assets/video/VILLAGE LIFE _ Raw Beauty of Rural Bangladesh - 4K Cinematic.mp4'
+import videoBD from '../assets/video/AgroHut intro.mp4'
 
 const Header = () => {
     return (
@@ -14,7 +14,7 @@ const Header = () => {
                 <div className="container h-100">
                     <div className="d-flex h-100 text-center align-items-center">
                         <div className="w-100 text-white">
-                            <h1 className="display-3">Welcome to AGRO-HUT Store</h1>
+                            <h1 className="display-3">Welcome to <b>AGRO-HUT</b> Store</h1>
                             <p className="lead mb-0">Lorem ipsum dolor sit amet.</p>
                         </div>
                     </div>
