@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const Tab = () => {
     return (
         <div className="bg-light">
@@ -16,7 +17,9 @@ const Tab = () => {
                 <li class="nav-item">
                     <a class="nav-link" href="#">Our Location</a>
                 </li>
+
             </ul>
+
             {/* <ul className="nav justify-content-center">
                 <li className="nav-item ">
                     <a className="nav-link active" aria-current="page" href="#">Active</a>

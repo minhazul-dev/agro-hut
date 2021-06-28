@@ -45,17 +45,15 @@ const SellPoster = () => {
                                     </a>
                                     <div className="card-content">
                                         <h4 className="card-title">
-                                            <a href=""> Lorem ipsum dolor sit amet.
-                        </a>
+                                            <a href=""> Lorem ipsum dolor sit amet.</a>
                                         </h4>
                                         <p className>
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, voluptatibus.
-                      </p>
+                                             </p>
                                     </div>
                                     <div className="card-read-more">
                                         <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html" className="btn btn-link btn-block">
-                                            Shop Now
-                      </a>
+                                            Shop Now </a>
                                     </div>
                                 </div>
                             </div>
@@ -67,16 +65,16 @@ const SellPoster = () => {
                                     <div className="card-content">
                                         <h4 className="card-title">
                                             <a href=""> Lorem ipsum dolor sit amet.
-                        </a>
+                                               </a>
                                         </h4>
                                         <p className>
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, fugit!
-                      </p>
+                                         </p>
                                     </div>
                                     <div className="card-read-more">
                                         <a href="https://codepen.io/wisnust10/full/ZWERZK/" className="btn btn-link btn-block">
                                             Shop Now
-                      </a>
+                                         </a>
                                     </div>
                                 </div>
                             </div>
