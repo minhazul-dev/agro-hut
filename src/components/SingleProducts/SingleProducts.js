@@ -1,5 +1,15 @@
 import React from 'react';
 import "./SingleProducts.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faRandom, faSearch, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import { faHeart } from '@fortawesome/free-regular-svg-icons';
+
+
+
+
+
+
+
 const SingleProducts = ({ pd }) => {
 
     return (
@@ -12,10 +22,11 @@ const SingleProducts = ({ pd }) => {
                         <img className="pic-2" src={pd.img} />
                     </a>
                     <ul className="product-links">
-                        <li><a href="#"><i className="fa fa-shopping-cart" /></a></li>
-                        <li><a href="#"><i className="far fa-heart" /></a></li>
-                        <li><a href="#"><i className="fa fa-random" /></a></li>
-                        <li><a href="#"><i className="fa fa-search" /></a></li>
+
+                        <li> <FontAwesomeIcon icon={faShoppingCart} size='3x' /></li>
+                        <li> <FontAwesomeIcon icon={faHeart} size='3x' /></li>
+                        <li> <FontAwesomeIcon icon={faRandom} size='3x' /></li>
+                        <li> <FontAwesomeIcon icon={faSearch} size='3x' /></li>
                     </ul>
                 </div>
                 <div className="product-content">
@@ -27,7 +38,12 @@ const SingleProducts = ({ pd }) => {
                         <li className="far fa-star" />
                     </ul> */}
                     <h3 className="title"><a href="#">{pd.name}</a></h3>
-                    <div className="price">$85.55</div>
+                    <p>{pd.description}</p>
+                    <div className="price"> price: $85.55</div>
+                    <div class="text-center">
+                        <button type="button" class="btn btn-outline-info">Buy Now</button>
+                    </div>
+
                 </div>
             </div>
         </div>

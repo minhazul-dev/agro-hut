@@ -96,7 +96,7 @@ const Products = () => {
 
     return (
         <section>
-            <h2 className="text-center mb-3">Buy Products</h2>
+            <h2 className="text-center mb-4 font-weight-bold text-info">Buy Products</h2>
             <div className="container">
                 <div className="row">
                     {
