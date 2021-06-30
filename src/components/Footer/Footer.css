@@ -1,0 +1,55 @@
+p {
+  font-size: 14px;
+}
+
+.fcf {
+  /* background-color: #4527a0; */
+  background-color: #f4f4f4;
+}
+
+.top-part {
+  background-color: #f4f4f4;
+}
+
+.center-content {
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+
+.btn-pink {
+  border-radius: 0;
+  background-color: #ff4081;
+  color: black !important;
+  letter-spacing: 2px;
+  padding: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-radius: 2px;
+  border: 3px solid black !important;
+}
+
+.btn-pink:hover {
+  background-color: #f50057;
+}
+
+.line {
+  border-top: 1px solid #7b1fa2;
+  width: 90% !important;
+}
+
+.fa-mobile {
+  font-size: 20px;
+}
+
+#contact {
+  font-size: 15px;
+  color: black;
+}
+
+.grey-text {
+  color: black;
+}
+
+.footer-heading {
+  margin-top: 40px;
+}

@@ -3,6 +3,7 @@ import "./SingleProducts.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRandom, faSearch, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
+import { useHistory } from 'react-router';
 
 
 
@@ -11,6 +12,15 @@ import { faHeart } from '@fortawesome/free-regular-svg-icons';
 
 
 const SingleProducts = ({ pd }) => {
+
+    const { id } = pd;
+    console.log(id);
+    const history = useHistory();
+
+    const showCheckout = (_id) => {
+        const url = `/checkout/${_id}`
+        history.push(url);
+    };
 
     return (
 
@@ -41,7 +51,7 @@ const SingleProducts = ({ pd }) => {
                     <p>{pd.description}</p>
                     <div className="price"> price: $85.55</div>
                     <div class="text-center">
-                        <button type="button" class="btn btn-outline-info">Buy Now</button>
+                        <button onClick={() => showCheckout(id)} type="button" class="btn btn-outline-info">Buy Now</button>
                     </div>
 
                 </div>

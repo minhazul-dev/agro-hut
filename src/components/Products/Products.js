@@ -17,72 +17,84 @@ import SingleProducts from '../SingleProducts/SingleProducts';
 
 const productsData = [
     {
+        id: 1,
         name: 'berry',
         img: berry,
         description: 'Lorem ipsum dolor sit'
 
     },
     {
+        id: 2,
         name: 'carrots',
         img: carrots,
         description: 'Lorem ipsum dolor sit'
 
     },
     {
+        id: 3,
         name: 'chilli',
         img: chilli,
         description: 'Lorem ipsum dolor sit'
 
     },
     {
+        id: 4,
         name: 'Grapes',
         img: grapes,
         description: 'Lorem ipsum dolor sit'
 
     },
     {
+        id: 5,
         name: 'lemons',
         img: lemons,
         description: 'Lorem ipsum dolor sit'
 
     },
     {
+        id: 6,
         name: 'olives',
         img: olives,
         description: 'Lorem ipsum dolor sit'
 
     },
     {
+        id: 7,
         name: 'Onions',
         img: onions,
         description: 'Lorem ipsum dolor sit'
 
     },
     {
+        id: 8,
         name: 'Potato',
         img: potato,
         description: 'Lorem ipsum dolor sit'
 
     },
     {
+        id: 9,
         name: 'Pumpkin',
         img: pumpkin,
         description: 'Lorem ipsum dolor sit'
 
     },
     {
+        id: 10,
         name: 'Strawberry',
         img: Strawberry,
         description: 'Lorem ipsum dolor sit'
 
     },
     {
+        id: 11,
         name: 'Tomatoes',
         img: Tomatoes,
         description: 'Lorem ipsum dolor sit'
 
     },
     {
+        id: 12,
         name: 'Zuccini',
         img: Zuccini,
         description: 'Lorem ipsum dolor sit'
