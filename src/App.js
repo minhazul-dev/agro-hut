@@ -22,7 +22,6 @@ function App() {
           <Route path="/addProducts">
             <AddProducts />
           </Route>
-
         </Switch>
       </Router>
     </div>

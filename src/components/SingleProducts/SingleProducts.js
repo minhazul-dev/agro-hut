@@ -28,8 +28,8 @@ const SingleProducts = ({ pd }) => {
             <div className="product-grid">
                 <div className="product-image">
                     <a href="#" className="image">
-                        <img className="pic-1" src={pd.img} />
-                        <img className="pic-2" src={pd.img} />
+                        <img className="pic-1" src={pd.image} />
+                        <img className="pic-2" src={pd.image} />
                     </a>
                     <ul className="product-links">
 
@@ -49,7 +49,7 @@ const SingleProducts = ({ pd }) => {
                     </ul> */}
                     <h3 className="title"><a href="#">{pd.name}</a></h3>
                     <p>{pd.description}</p>
-                    <div className="price"> price: $85.55</div>
+                    <p className="price"> $ {pd.price}</p>
                     <div class="text-center">
                         <button onClick={() => showCheckout(id)} type="button" class="btn btn-outline-info">Buy Now</button>
                     </div>

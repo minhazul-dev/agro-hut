@@ -1,6 +1,6 @@
 import React from 'react';
 import Tab from './Tab/Tab';
-
+import './Navbar.css'
 const Navbar = () => {
     return (
         <section>
@@ -20,10 +20,11 @@ const Navbar = () => {
                             <li className="nav-item">
                                 <a className="nav-link active" href="#">Sale</a>
                             </li>
+
                             <li className="nav-item dropdown">
                                 <a className="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Products
-                </a>
+                                 </a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a className="dropdown-item" href="#">Action</a></li>
                                     <li><a className="dropdown-item" href="#">Another action</a></li>
@@ -32,8 +33,10 @@ const Navbar = () => {
                                 </ul>
                             </li>
 
+
                         </ul>
                         <form className="d-flex">
+
                             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                             <button className="btn btn-outline-success" type="submit">Search</button>
                         </form>

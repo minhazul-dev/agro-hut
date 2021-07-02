@@ -113,21 +113,22 @@
   font-size: 16px;
   font-weight: 600;
   text-transform: capitalize;
-  margin: 0 0 6px;
+  /* margin: 0 0 6px; */
   float: right;
+  margin-top: 15px;
 }
 .product-grid .title a {
   color: #555;
   transition: all 0.3s ease 0s;
 }
 .product-grid .title a:hover {
-  color: #ed1d24;
+  color: blue;
 }
 .product-grid .price {
-  color: #ed1d24;
+  color: blue;
   font-size: 18px;
   font-weight: 700;
-  text-align: center;
+  /* text-align: center; */
   margin-bottom: 15px;
 }
 @media screen and (max-width: 990px) {

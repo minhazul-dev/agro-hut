@@ -51,8 +51,8 @@ const AddProducts = () => {
 
     }
     return (
-        <section>
-            <h3 className="text-center mt-5">Here Add Products</h3>
+        <section style={{ backgroundColor: '#9CC3D5FF', height: '700px' }}>
+            <h3 className="text-center">Here Add Products</h3>
             <div className="container mx-auto mt-5 form-group">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <input className="form-control" defaultValue="name" {...register("name")} />
@@ -63,6 +63,9 @@ const AddProducts = () => {
 
                     <input className="mt-4" type="submit" />
                 </form>
+            </div>
+            <div className="container text-center">
+                <a href="/"> <button type="button" className="btn btn-outline-success">HOME</button></a>
             </div>
         </section>
     );

@@ -52,7 +52,7 @@ const SellPoster = () => {
                                              </p>
                                     </div>
                                     <div className="card-read-more">
-                                        <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html" className="btn btn-link btn-block">
+                                        <a href="/products" className="btn btn-link btn-block">
                                             Shop Now </a>
                                     </div>
                                 </div>
@@ -72,7 +72,7 @@ const SellPoster = () => {
                                          </p>
                                     </div>
                                     <div className="card-read-more">
-                                        <a href="https://codepen.io/wisnust10/full/ZWERZK/" className="btn btn-link btn-block">
+                                        <a href="/products" className="btn btn-link btn-block">
                                             Shop Now
                                          </a>
                                     </div>
@@ -93,7 +93,7 @@ const SellPoster = () => {
                       </p>
                                     </div>
                                     <div className="card-read-more">
-                                        <a href="" className="btn btn-link btn-block">
+                                        <a href="/products" className="btn btn-link btn-block">
                                             Shop Now
                       </a>
                                     </div>
