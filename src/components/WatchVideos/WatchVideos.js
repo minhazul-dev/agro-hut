@@ -2,11 +2,11 @@ import React from 'react';
 import "./WatchVideos.css"
 const WatchVideos = () => {
     return (
-        <section className="">
+        <div></div>
 
 
 
-        </section>
+
     );
 };
 

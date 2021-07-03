@@ -27,10 +27,10 @@ const SingleProducts = ({ pd }) => {
         <div className="col-md-3">
             <div className="product-grid">
                 <div className="product-image">
-                    <a href="#" className="image">
+                    <div className="image">
                         <img className="pic-1" src={pd.image} />
                         <img className="pic-2" src={pd.image} />
-                    </a>
+                    </div>
                     <ul className="product-links">
 
                         <li> <FontAwesomeIcon icon={faShoppingCart} size='3x' /></li>

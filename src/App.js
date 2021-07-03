@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Checkout from './components/Checkout/Checkout';
 import AddProducts from './components/AddProducts/AddProducts';
+import AddReview from './components/AddReview/AddReview';
 function App() {
   return (
     <div>
@@ -21,6 +22,9 @@ function App() {
           </Route>
           <Route path="/addProducts">
             <AddProducts />
+          </Route>
+          <Route path="/addReview">
+            <AddReview />
           </Route>
         </Switch>
       </Router>

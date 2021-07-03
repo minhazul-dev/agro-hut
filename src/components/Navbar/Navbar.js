@@ -32,6 +32,9 @@ const Navbar = () => {
                                     <li><a className="dropdown-item" href="#">Something else here</a></li>
                                 </ul>
                             </li>
+                            <li className="nav-item">
+                                <a className="nav-link active" href="/addReview">Add Review</a>
+                            </li>
 
 
                         </ul>

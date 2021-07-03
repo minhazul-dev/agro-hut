@@ -6,7 +6,8 @@ import Navbar from '../Navbar/Navbar';
 
 import Products from '../Products/Products';
 import SellPoster from '../SellPoster/SellPoster';
-import WatchVideos from '../WatchVideos/WatchVideos';
+import Testimonials from '../Testimonials/Testimonials';
+
 
 
 const Home = () => {
@@ -19,7 +20,7 @@ const Home = () => {
             {/* <Maintenance /> */}
             <SellPoster />
             <Products />
-            {/* <WatchVideos /> */}
+            <Testimonials />
             <Footer />
         </div>
 
@@ -30,3 +31,6 @@ const Home = () => {
 };
 
 export default Home;
+
+
+
