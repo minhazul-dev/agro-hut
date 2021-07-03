@@ -123,7 +123,7 @@ const Products = () => {
                 <div className="row">
 
                     {loading ? <div className="container text-center mt-5 mb-5"> <ScaleLoader /></div> :
-                        products.map(pd => <SingleProducts pd={pd} />)
+                        products.map(pd => <SingleProducts pd={pd} key={products.name} />)
                     }
                 </div>
             </div>

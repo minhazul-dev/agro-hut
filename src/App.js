@@ -16,7 +16,7 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/checkout/:id">
+          <Route path="/checkout/:_id">
             <Checkout />
           </Route>
           <Route path="/addProducts">

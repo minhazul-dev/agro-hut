@@ -13,8 +13,8 @@ import { useHistory } from 'react-router';
 
 const SingleProducts = ({ pd }) => {
 
-    const { id } = pd;
-    console.log(id);
+    const { _id } = pd;
+    console.log(_id);
     const history = useHistory();
 
     const showCheckout = (_id) => {
@@ -47,11 +47,11 @@ const SingleProducts = ({ pd }) => {
                         <li className="fa fa-star" />
                         <li className="far fa-star" />
                     </ul> */}
-                    <h3 className="title"><a href="#">{pd.name}</a></h3>
-                    <p>{pd.description}</p>
+                    <h3 className="title "><a href="">{pd.name}</a></h3>
+                    <p className="text-center">{pd.description}</p>
                     <p className="price"> $ {pd.price}</p>
                     <div class="text-center">
-                        <button onClick={() => showCheckout(id)} type="button" class="btn btn-outline-info">Buy Now</button>
+                        <button onClick={() => showCheckout(_id)} type="button" class="btn btn-outline-info">Buy Now</button>
                     </div>
 
                 </div>
