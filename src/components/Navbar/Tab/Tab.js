@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Tab.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import { faSearch, faStreetView } from '@fortawesome/free-solid-svg-icons'
 import { faAndroid, faFacebook, faGooglePlay, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 const Tab = () => {
     return (
@@ -14,7 +14,7 @@ const Tab = () => {
                 </li>
                 <li>
                     <a href="#">
-                        <FontAwesomeIcon className="iconss" icon={faAndroid} size='1x' />
+                        <FontAwesomeIcon className="iconss" icon={faStreetView} size='1x' />
                     </a>
                 </li>
                 <li>
@@ -37,6 +37,7 @@ const Tab = () => {
                         <FontAwesomeIcon className="iconss" icon={faFacebook} size='1x' />
                     </a>
                 </li>
+
             </ul>
         </div>
 

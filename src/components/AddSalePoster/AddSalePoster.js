@@ -1,28 +1,30 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
-import "./AddReview.css"
-const AddReview = () => {
+
+
+
+const AddSalePoster = () => {
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const [imageUrl, setImageUrl] = useState(null)
     const onSubmit = data => {
-        alert("Review Added successfully!!!!");
+        alert("SalePoster Added successfully!!!!");
         console.log(data)
-        const reviewData = {
+        const salePosterData = {
             name: data.name,
-            location: data.location,
+            // location: data.location,
             image: imageUrl,
             description: data.description
         }
-        const url = `http://localhost:5000/addReview`
-        console.log(reviewData);
+        const url = `http://localhost:5000/addSalePoster`
+        console.log(salePosterData);
         fetch(url, {
             method: 'POST',
             headers: {
                 "content-Type": "application/json"
             },
-            body: JSON.stringify(reviewData)
+            body: JSON.stringify(salePosterData)
         })
             .then(response => console.log('server side response', response))
     }
@@ -51,7 +53,6 @@ const AddReview = () => {
             });
 
     }
-
     return (
         <section style={{ backgroundColor: '#9CC3D5FF', height: '750px' }}>
             <h4 className="text-center">write a review</h4>
@@ -61,7 +62,7 @@ const AddReview = () => {
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <input className="form-control w-50" defaultValue="name" {...register("name")} />
                             <input className="form-control mt-3 mb-3 w-50" onChange={handleImageUpload} type="file" />
-                            <input className="form-control mt-3 mb-3 w-50" defaultValue="location" {...register("location")} />
+                            {/* <input className="form-control mt-3 mb-3 w-50" defaultValue="location" {...register("location")} /> */}
                             <input className="form-control mt-3 mb-3 w-50" defaultValue="description" {...register("description")} />
 
 
@@ -79,4 +80,4 @@ const AddReview = () => {
     );
 };
 
-export default AddReview;
+export default AddSalePoster;

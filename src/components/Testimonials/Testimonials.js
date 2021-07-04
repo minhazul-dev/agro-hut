@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./Testimonials.css"
-import OwlCarousel from 'react-owl-carousel';
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 const Testimonials = () => {
 
@@ -52,3 +49,6 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
+
+
+

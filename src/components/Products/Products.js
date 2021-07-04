@@ -13,6 +13,7 @@ import React, { useEffect, useState } from 'react';
 // import Zuccini from '../assets/images/products/zuccini.jpg'
 import SingleProducts from '../SingleProducts/SingleProducts';
 import { ScaleLoader } from "react-spinners";
+import "./Products.css"
 
 
 // const productsData = [
@@ -118,7 +119,15 @@ const Products = () => {
     return (
         <section>
 
-            <h2 className="text-center mb-4 font-weight-bold text-info">Buy Products</h2>
+            <div className="container">
+                <div className="headingsHeaderproducts">
+                    <h2 className="titleproductsheader"><b>Available|Products</b></h2>
+                    <span className="hrtitleproducts" />
+                </div>
+            </div>
+
+
+            {/* <h2 className="text-center mb-4 font-weight-bold text-info">Buy Products</h2> */}
             <div className="container">
                 <div className="row">
 

@@ -1,0 +1,18 @@
+.headingsHeaderproducts {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 2em 0;
+}
+
+.titleproductsheader {
+  margin: 0;
+}
+
+.hrtitleproducts {
+  display: block;
+  flex: 1;
+  margin: 0 30px;
+  height: 3px;
+  background: #d4d4d4;
+}

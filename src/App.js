@@ -9,6 +9,7 @@ import {
 import Checkout from './components/Checkout/Checkout';
 import AddProducts from './components/AddProducts/AddProducts';
 import AddReview from './components/AddReview/AddReview';
+import AddSalePoster from './components/AddSalePoster/AddSalePoster';
 function App() {
   return (
     <div>
@@ -25,6 +26,9 @@ function App() {
           </Route>
           <Route path="/addReview">
             <AddReview />
+          </Route>
+          <Route path="/addSalePoster">
+            <AddSalePoster />
           </Route>
         </Switch>
       </Router>

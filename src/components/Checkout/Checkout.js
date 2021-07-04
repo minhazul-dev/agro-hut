@@ -115,6 +115,7 @@ const Checkout = () => {
                 <div className="col-sm-5 col-md-6 mobile">
                     <div className="py-4 d-flex justify-content-end">
                         <h6><a href="/">Cancel and return to website</a></h6>
+                        <h6 className="ms-5"><a href="/addReview">Add a Review</a></h6>
                     </div>
                     <div className="bg-white p-3 d-flex flex-column" style={{ borderRadius: '14px' }}>
                         <div className="pt-2">

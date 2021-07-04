@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "./SellPoster.css"
-import AgroHutLogo from '../assets/images/Agro_Hut Logos/AgroHutLoged.png'
-import saleImg01 from '../assets/images/Sale_poster/add-img-01.jpg'
-import saleImg02 from '../assets/images/Sale_poster/add-img-02.jpg'
-
+// import AgroHutLogo from '../assets/images/Agro_Hut Logos/AgroHutLoged.png'
+// import saleImg01 from '../assets/images/Sale_poster/add-img-01.jpg'
+// import saleImg02 from '../assets/images/Sale_poster/add-img-02.jpg'
+import { ScaleLoader } from "react-spinners";
 // const saleData = [
 //     {
 //         name: 'vegetables',
@@ -26,6 +26,18 @@ import saleImg02 from '../assets/images/Sale_poster/add-img-02.jpg'
 // ]
 
 const SellPoster = () => {
+
+    const [salePoster, setSalePoster] = useState([])
+    const [loading, setLoading] = useState(true);
+    useEffect(() => {
+        fetch('http://localhost:5000/salePosters')
+            .then(res => res.json())
+            .then(data => {
+                setSalePoster(data)
+                setLoading(false)
+            })
+
+    }, [])
     return (
         <section className="wrapper">
             <div className="container-fostrap">
@@ -38,67 +50,29 @@ const SellPoster = () => {
                 <div className="content">
                     <div className="container">
                         <div className="row">
-                            <div className="col-xs-12 col-sm-4">
-                                <div className="card">
-                                    <a className="img-card" href="">
-                                        <img src={saleImg01} />
-                                    </a>
-                                    <div className="card-content">
-                                        <h4 className="card-title">
-                                            <a href=""> Lorem ipsum dolor sit amet.</a>
-                                        </h4>
-                                        <p className>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, voluptatibus.
-                                             </p>
+                            {loading ? <div className="container text-center mt-5 mb-5"> <ScaleLoader /></div> :
+                                salePoster.map(salePoster => <div className="col-xs-12 col-sm-4">
+                                    <div className="card">
+                                        <a className="img-card" href="">
+                                            <img src={salePoster.image} />
+                                        </a>
+                                        <div className="card-content">
+                                            <h4 className="card-title">
+                                                <h4> {salePoster.name}</h4>
+                                            </h4>
+                                            <p className>
+                                                {salePoster.description}
+                                            </p>
+                                        </div>
+                                        <div className="card-read-more">
+                                            <a href="/products" className="btn btn-link btn-block">
+                                                Shop Now </a>
+                                        </div>
                                     </div>
-                                    <div className="card-read-more">
-                                        <a href="/products" className="btn btn-link btn-block">
-                                            Shop Now </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xs-12 col-sm-4">
-                                <div className="card">
-                                    <a className="img-card" href="">
-                                        <img src={saleImg02} />
-                                    </a>
-                                    <div className="card-content">
-                                        <h4 className="card-title">
-                                            <a href=""> Lorem ipsum dolor sit amet.
-                                               </a>
-                                        </h4>
-                                        <p className>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, fugit!
-                                         </p>
-                                    </div>
-                                    <div className="card-read-more">
-                                        <a href="/products" className="btn btn-link btn-block">
-                                            Shop Now
-                                         </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xs-12 col-sm-4">
-                                <div className="card">
-                                    <a className="img-card" href="">
-                                        <img src={saleImg01} />
-                                    </a>
-                                    <div className="card-content">
-                                        <h4 className="card-title">
-                                            <a href="">Lorem ipsum dolor sit amet.
-                        </a>
-                                        </h4>
-                                        <p className>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, a.
-                      </p>
-                                    </div>
-                                    <div className="card-read-more">
-                                        <a href="/products" className="btn btn-link btn-block">
-                                            Shop Now
-                      </a>
-                                    </div>
-                                </div>
-                            </div>
+                                </div>)
+
+                            }
+
                         </div>
                     </div>
                 </div>
