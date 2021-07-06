@@ -7,7 +7,7 @@ const ManageProducts = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://thawing-fjord-24286.herokuapp.com/products')
             .then(response => response.json())
             .then(data => {
                 setProducts(data)
@@ -18,7 +18,7 @@ const ManageProducts = () => {
     }, [])
 
     const deleteProduct = id => {
-        const url = `http://localhost:5000/deleteProduct/${id}`;
+        const url = `https://thawing-fjord-24286.herokuapp.com/deleteProduct/${id}`;
         fetch((url), {
             method: 'DELETE',
         })

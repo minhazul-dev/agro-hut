@@ -12,7 +12,7 @@ const MakeAdmin = () => {
             description: data.description,
 
         }
-        const url = `http://localhost:5000/adminEmail`
+        const url = `https://thawing-fjord-24286.herokuapp.com/adminEmail`
         console.log(adminData);
         fetch(url, {
             method: 'POST',

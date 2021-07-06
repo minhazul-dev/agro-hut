@@ -30,7 +30,7 @@ const SellPoster = () => {
     const [salePoster, setSalePoster] = useState([])
     const [loading, setLoading] = useState(true);
     useEffect(() => {
-        fetch('http://localhost:5000/salePosters')
+        fetch('https://thawing-fjord-24286.herokuapp.com/salePosters')
             .then(res => res.json())
             .then(data => {
                 setSalePoster(data)

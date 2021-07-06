@@ -9,7 +9,7 @@ const Checkout = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
 
     useEffect(() => {
-        const url = `http://localhost:5000/products`
+        const url = `https://thawing-fjord-24286.herokuapp.com/products`
         fetch(url)
             .then(response => response.json())
             .then((data) => {
@@ -24,7 +24,7 @@ const Checkout = () => {
         const totalProduct = { name: e.name, price: e.price, lastModifiedDate: date, image: e.image }
         console.log(totalProduct);
         const newOrders = { ...loggedInUser, ...totalProduct };
-        fetch('http://localhost:5000/addOrder', {
+        fetch('https://thawing-fjord-24286.herokuapp.com/addOrder', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(newOrders)

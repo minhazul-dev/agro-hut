@@ -109,7 +109,7 @@ const Products = () => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://thawing-fjord-24286.herokuapp.com/products')
             .then(response => response.json())
             .then(data => {
                 setProducts(data)

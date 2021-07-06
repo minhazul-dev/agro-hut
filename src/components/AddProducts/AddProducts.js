@@ -19,7 +19,7 @@ const AddProducts = () => {
             image: imageUrl,
             description: data.description
         }
-        const url = `http://localhost:5000/addProducts`
+        const url = `https://thawing-fjord-24286.herokuapp.com/addProducts`
         console.log(productData);
         fetch(url, {
             method: 'POST',
@@ -58,7 +58,7 @@ const AddProducts = () => {
     const [isAdmin, setIsAdmin] = useState(false)
     const [loggedInUser] = useContext(UserContext)
     useEffect(() => {
-        fetch(`http://localhost:5000/isAdmin?email=${loggedInUser.email}`)
+        fetch(`https://thawing-fjord-24286.herokuapp.com/isAdmin?email=${loggedInUser.email}`)
             .then(response => response.json())
             .then(data => setIsAdmin(data))
     }, [loggedInUser.email])

@@ -17,7 +17,7 @@ const AddSalePoster = () => {
             image: imageUrl,
             description: data.description
         }
-        const url = `http://localhost:5000/addSalePoster`
+        const url = `https://thawing-fjord-24286.herokuapp.com/addSalePoster`
         console.log(salePosterData);
         fetch(url, {
             method: 'POST',

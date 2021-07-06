@@ -12,7 +12,7 @@ const AdminDashboard = () => {
     const [reviews, setReviews] = useState([])
     const [customers, setCustomers] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/reviews')
+        fetch('https://thawing-fjord-24286.herokuapp.com/reviews')
             .then(res => res.json())
             .then(data => setReviews(data))
 
@@ -20,7 +20,7 @@ const AdminDashboard = () => {
 
     //fetching all orders
     useEffect(() => {
-        fetch('http://localhost:5000/allOrders')
+        fetch('https://thawing-fjord-24286.herokuapp.com/allOrders')
             .then(res => res.json())
             .then(data => setCustomers(data))
 
@@ -28,7 +28,7 @@ const AdminDashboard = () => {
 
     //deleting reviews
     const deleteReview = id => {
-        const url = `http://localhost:5000/deletereviews/${id}`;
+        const url = `https://thawing-fjord-24286.herokuapp.com/deletereviews/${id}`;
         fetch((url), {
             method: 'DELETE',
         })
@@ -46,7 +46,7 @@ const AdminDashboard = () => {
     const [isAdmin, setIsAdmin] = useState(false)
     const [loggedInUser] = useContext(UserContext)
     useEffect(() => {
-        fetch(`http://localhost:5000/isAdmin?email=${loggedInUser.email}`)
+        fetch(`https://thawing-fjord-24286.herokuapp.com/isAdmin?email=${loggedInUser.email}`)
             .then(response => response.json())
             .then(data => setIsAdmin(data))
     }, [loggedInUser.email])

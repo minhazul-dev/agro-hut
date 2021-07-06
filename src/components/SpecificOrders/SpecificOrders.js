@@ -10,7 +10,7 @@ const SpecificOrders = () => {
     const [orders, setOrders] = useState([]);
     const [loading, setLoading] = useState(true)
     useEffect(() => {
-        fetch('http://localhost:5000/orders?email=' + loggedInUser.email)
+        fetch('https://thawing-fjord-24286.herokuapp.com/orders?email=' + loggedInUser.email)
             .then((response) => response.json())
             .then(data => {
                 console.log(data);
