@@ -24,7 +24,7 @@ const SingleProducts = ({ pd }) => {
 
     return (
 
-        <div className="col-md-3">
+        <div className="col-md-3" id="products">
             <div className="product-grid">
                 <div className="product-image">
                     <div className="image">

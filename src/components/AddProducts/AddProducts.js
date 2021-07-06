@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
+import { UserContext } from '../../App';
 
 
 
@@ -54,24 +55,40 @@ const AddProducts = () => {
             });
 
     }
+    const [isAdmin, setIsAdmin] = useState(false)
+    const [loggedInUser] = useContext(UserContext)
+    useEffect(() => {
+        fetch(`http://localhost:5000/isAdmin?email=${loggedInUser.email}`)
+            .then(response => response.json())
+            .then(data => setIsAdmin(data))
+    }, [loggedInUser.email])
+    console.log(isAdmin);
 
     return (
-        <section style={{ backgroundColor: '#9CC3D5FF', height: '700px' }}>
-            <h3 className="text-center">Here Add Products</h3>
-            <div className="container mx-auto mt-5 form-group">
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    <input className="form-control" defaultValue="name" {...register("name")} />
-                    <input className="form-control mt-3 mb-3" defaultValue="price" {...register("price")} />
-                    <input className="form-control mt-3 mb-3" defaultValue="description" {...register("description")} />
+        <section>
+            {
+                isAdmin ? <section style={{ backgroundColor: '#9CC3D5FF', height: '700px' }}>
+                    <h3 className="text-center">Here Add Products</h3>
+                    <div className="container mx-auto mt-5 form-group">
+                        <form onSubmit={handleSubmit(onSubmit)}>
+                            <input className="form-control" defaultValue="name" {...register("name")} />
+                            <input className="form-control mt-3 mb-3" defaultValue="price" {...register("price")} />
+                            <input className="form-control mt-3 mb-3" defaultValue="description" {...register("description")} />
 
-                    <input className="form-control mt-3 mb-3" onChange={handleImageUpload} type="file" />
+                            <input className="form-control mt-3 mb-3" onChange={handleImageUpload} type="file" />
 
-                    <input className="mt-4" type="submit" />
-                </form>
-            </div>
-            <div className="container text-center">
-                <a href="/"> <button type="button" className="btn btn-outline-success">HOME</button></a>
-            </div>
+                            <input className="mt-4" type="submit" />
+                        </form>
+                    </div>
+                    <div className="container text-center">
+                        <a href="/"> <button type="button" className="btn btn-outline-success">HOME</button></a>
+                    </div>
+                </section> : <div className="container mt-5">
+                    <h1 className="text-danger text-center"> THIS IS FOR ONLY SELECTED ADMIN.</h1>
+                    <h1 className="text-danger text-center"> Please Leave the page.</h1>
+                </div>
+
+            }
         </section>
     );
 };

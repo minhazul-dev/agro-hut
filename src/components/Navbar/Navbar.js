@@ -2,6 +2,7 @@ import React from 'react';
 import Tab from './Tab/Tab';
 import './Navbar.css'
 import logos from '../../components/assets/images/Agro_Hut Logos/AgroHutLoged.png'
+import { Link } from 'react-scroll'
 const Navbar = () => {
     return (
         <section>
@@ -23,8 +24,39 @@ const Navbar = () => {
                         <div className="collapse navbar-collapse" id="navbarCollapse">
                             {/* Nav */}
                             <div className="navbar-nav mx-lg-auto">
-                                <a className="nav-item nav-link active" href="#" aria-current="page">Home</a>
-                                <a className="nav-item nav-link active" href="" aria-current="page">Products</a>
+
+                                <Link
+                                    activeClass="active"
+                                    to="home"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration={500}
+
+                                ><a className="nav-item nav-link active" href="#" aria-current="page">Home</a>
+                                </Link>
+                                <Link
+                                    activeClass="active"
+                                    to="reviews"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration={500}
+
+                                ><a className="nav-item nav-link active" href="#" aria-current="page">Reviews</a>
+                                </Link>
+                                <Link
+                                    activeClass="active"
+                                    to="products"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration={600}
+
+                                ><a className="nav-item nav-link active" href="" aria-current="page">Products</a>
+                                </Link>
+
+
                                 <a className="nav-item nav-link active" href="/addReview" aria-current="page">Add Review</a>
                                 {/* <a className="nav-item nav-link" href="#">Product</a>
                                 <a className="nav-item nav-link" href="#">Features</a>
@@ -32,11 +64,11 @@ const Navbar = () => {
                             </div>
                             {/* Right navigation */}
                             <div className="navbar-nav ms-lg-4">
-                                <a className="nav-item nav-link" href="#">Admin</a>
+                                <a className="nav-item nav-link" href="/loginFormAdmin">Admin</a>
                             </div>
                             {/* Action */}
                             <div className="d-flex align-items-lg-center mt-3 mt-lg-0">
-                                <a href="#" className="btn btn-sm btn-primary w-full w-lg-auto">
+                                <a href="/myOrders" className="btn btn-sm btn-primary w-full w-lg-auto">
                                     My Account
                                 </a>
                             </div>

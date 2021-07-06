@@ -39,13 +39,13 @@ const SellPoster = () => {
 
     }, [])
     return (
-        <section className="wrapper">
+        <section className="wrapper" id="home">
             <div className="container-fostrap">
                 <div>
                     {/* <img src="https://4.bp.blogspot.com/-7OHSFmygfYQ/VtLSb1xe8kI/AAAAAAAABjI/FxaRp5xW2JQ/s320/logo.png" className="fostrap-logo" /> */}
                     <h1 className="heading mb-4">
                         Grab The Biggest Sale of The Month
-                           </h1>
+                    </h1>
                 </div>
                 <div className="content">
                     <div className="container">

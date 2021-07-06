@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import { UserContext } from '../../App';
 import "./Checkout.css"
 const Checkout = () => {
 
     const { _id } = useParams()
     const [details, setDetails] = useState([]);
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext)
 
     useEffect(() => {
         const url = `http://localhost:5000/products`
@@ -19,9 +21,9 @@ const Checkout = () => {
     console.log(allDetails);
     const handleOrders = (e) => {
         let date = new Date()
-        const totalProduct = { name: e.name, price: e.price, lastModifiedDate: date, image: e.imageUrl }
+        const totalProduct = { name: e.name, price: e.price, lastModifiedDate: date, image: e.image }
         console.log(totalProduct);
-        const newOrders = { ...totalProduct };
+        const newOrders = { ...loggedInUser, ...totalProduct };
         fetch('http://localhost:5000/addOrder', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },

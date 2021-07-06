@@ -14,7 +14,7 @@ const Testimonials = () => {
 
     return (
 
-        <section className="gestimonials">
+        <section className="gestimonials" id="reviews">
             <div className="testimonials-clean">
                 <div className="container">
                     <div className="intro">
