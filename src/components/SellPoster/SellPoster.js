@@ -4,6 +4,8 @@ import "./SellPoster.css"
 // import saleImg01 from '../assets/images/Sale_poster/add-img-01.jpg'
 // import saleImg02 from '../assets/images/Sale_poster/add-img-02.jpg'
 import { ScaleLoader } from "react-spinners";
+import { Link } from 'react-router-dom';
+// import { Link } from 'react-scroll'
 // const saleData = [
 //     {
 //         name: 'vegetables',
@@ -39,7 +41,7 @@ const SellPoster = () => {
 
     }, [])
     return (
-        <section className="wrapper" id="home">
+        <section className="wrapper">
             <div className="container-fostrap">
                 <div>
                     {/* <img src="https://4.bp.blogspot.com/-7OHSFmygfYQ/VtLSb1xe8kI/AAAAAAAABjI/FxaRp5xW2JQ/s320/logo.png" className="fostrap-logo" /> */}
@@ -53,9 +55,9 @@ const SellPoster = () => {
                             {loading ? <div className="container text-center mt-5 mb-5"> <ScaleLoader /></div> :
                                 salePoster.map(salePoster => <div className="col-xs-12 col-sm-4">
                                     <div className="card">
-                                        <a className="img-card" href="">
+                                        <p className="img-card" href="">
                                             <img src={salePoster.image} />
-                                        </a>
+                                        </p>
                                         <div className="card-content">
                                             <h4 className="card-title">
                                                 <h4> {salePoster.name}</h4>
@@ -65,8 +67,19 @@ const SellPoster = () => {
                                             </p>
                                         </div>
                                         <div className="card-read-more">
-                                            <a href="/products" className="btn btn-link btn-block">
-                                                Shop Now </a>
+                                            <Link
+                                                activeClass="active"
+                                                to="products"
+                                                spy={true}
+                                                smooth={true}
+                                                offset={-70}
+                                                duration={600}>
+
+                                                <a href="" className="btn btn-link btn-block">
+                                                    Shop Now </a>
+                                            </Link>
+
+
                                         </div>
                                     </div>
                                 </div>)

@@ -86,6 +86,15 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
+            <div className="container ">
+                <div className="row">
+                    <div className="col-md-8 col-sm-6 col-xs-12">
+                        <p className="copyright-text ">Developer
+                            <a className="ms-1" target="_blank" href="https://minhazul-portfolio.web.app/">Md. Minhazul Alam</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };

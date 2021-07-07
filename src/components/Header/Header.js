@@ -6,7 +6,7 @@ const Header = () => {
     return (
 
         <div>
-            <header>
+            <header id="home">
                 <div className="overlay" />
                 <video playsInline="playsinline" autoPlay="autoplay" muted="muted" loop="loop">
                     <source src={videoBD} type="video/mp4" />
