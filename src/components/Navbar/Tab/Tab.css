@@ -64,3 +64,10 @@
   font-weight: 600;
   font-size: 13px;
 }
+
+/* @media only screen and (min-width: 768px) and (max-width: 991px),
+  (max-width: 767px) {
+  .test {
+    text-align: center;
+  }
+} */

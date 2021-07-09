@@ -6,6 +6,7 @@ import { faAndroid, faFacebook, faGooglePlay, faInstagram, faLinkedinIn } from '
 const Tab = () => {
     return (
         <div id="wrapper">
+            {/* <h2 className="test">testing</h2> */}
             <ul>
                 <li>
                     <a href="#">

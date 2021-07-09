@@ -13,18 +13,18 @@ const Footer = () => {
                         <h3 className="footer-heading">Start Working With Agro_Hut</h3>
                     </div>
                     <div className="d-flex-inline mt-3">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias itaque accusamus placeat cumque atque reprehenderit id tenetur! Rem, eum voluptatibus ipsum at modi id hic.</p>
+                        <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias itaque accusamus placeat cumque atque reprehenderit id tenetur! Rem, eum voluptatibus ipsum at modi id hic.</p>
                     </div>
                     <div className="d-flex-inline pt-2"> <button className="btn-pink btn">Contact Now</button> </div>
                 </div>
             </div>
-            <div className="row">
+            <div className="row text-white">
                 <div className="line mb-3 mx-auto" />
                 <div className="d-md-flex px-5 justify-content-around bd-highlight col-md-12 pt-5 pb-5 mb-3">
                     <div className="p-2 flex-fill bd-highlight mb-5 mb-md-0">
-                        <h3>Agro-Hut</h3> <small>Copyright © 2021</small>
+                        <h3 className="text-white" >Agro-Hut</h3> <small>Copyright © 2021</small>
                     </div>
-                    <div className="p-2 flex-fill bd-highlight mb-3 mb-md-0">
+                    <div className="p-2 flex-fill bd-highlight mb-3 mb-md-0 text-white">
                         <h5 className="places">Location 01</h5>
                         <p className="mb-0">Bydgoszcz Centrum Burnesa</p>
                         <p className="mb-0">ul Pzzenmdcwa 25, ibsura 24,</p>
@@ -55,7 +55,7 @@ const Footer = () => {
                 </div>
                 <div className="line mb-3 mx-auto" />
             </div>
-            <div className="row bottom-part">
+            <div className="row bottom-part text-white">
                 <div className="d-lg-flex justify-content-between bd-highlight col-md-12 mb-5 px-5">
                     <div className="p-2 align-self-center flex-fill bd-highlight">
                         {/* <div className="fa fa-facebook px-2" />
@@ -80,17 +80,17 @@ const Footer = () => {
                             <div className="p-2 flex-fill d-flex bd-highlight">Manifesto</div>
                         </div>
                     </div>
-                    <div className="p-2 align-self-center flex-fill bd-highlight">
-                        <div className="fa fa-mobile px-2 grey-text">&nbsp;&nbsp;<span id="contact">888-777-666</span></div>
-                        <div className="fa fa-envelope-o px-2 grey-text">&nbsp;&nbsp;info@agro_hut.in</div>
+                    <div className="p-2 align-self-center flex-fill bd-highlight ">
+                        <div className="fa fa-mobile px-2 grey-text ">&nbsp;&nbsp;<span className="text-white" id="contact">888-777-666</span></div>
+                        <div className="fa fa-envelope-o px-2 grey-white">&nbsp;&nbsp;info@agro_hut.in</div>
                     </div>
                 </div>
             </div>
             <div className="container ">
                 <div className="row">
                     <div className="col-md-8 col-sm-6 col-xs-12">
-                        <p className="copyright-text ">Developer
-                            <a className="ms-1" target="_blank" href="https://minhazul-portfolio.web.app/">Md. Minhazul Alam</a>.
+                        <p className="copyright-text text-white ">Developer
+                            <a className="ms-1" target="_blank" href="https://minhazul-portfolio.web.app/">Md. Minhazul Alam</a>
                         </p>
                     </div>
                 </div>
