@@ -17,7 +17,7 @@ const Home = () => {
 
             <Navbar />
             <Header />
-            {/* <Maintenance /> */}
+            <Maintenance />
             <SellPoster />
             <Products />
             <Testimonials />

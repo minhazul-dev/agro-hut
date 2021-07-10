@@ -33,7 +33,7 @@ const Checkout = () => {
             .then(response => response.json())
             .then(data => {
                 if (data) {
-                    alert("Product Added successfully!!!!")
+                    alert("Product Ordered successfully!!!!")
                 }
                 // console.log(data)
                 console.log(alert)

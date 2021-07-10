@@ -27,20 +27,20 @@ const Login = () => {
                 const { displayName, photoURL, email } = res.user;
                 const signedInUser = { name: displayName, email: email, image: photoURL }
                 setLoggedInUser(signedInUser);
-                storeAuthToken();
+                // storeAuthToken();
                 history.replace(from)
             })
 
 
     }
-    const storeAuthToken = () => {
-        firebase.auth().currentUser.getIdToken(true)
-            .then(function (idToken) {
-                sessionStorage.setItem('token', idToken)
-            }).catch(function (error) {
-                // Handle error
-            });
-    }
+    // const storeAuthToken = () => {
+    //     firebase.auth().currentUser.getIdToken(true)
+    //         .then(function (idToken) {
+    //             sessionStorage.setItem('token', idToken)
+    //         }).catch(function (error) {
+    //             // Handle error
+    //         });
+    // }
 
 
     // const handleFbSignIn = () => {
