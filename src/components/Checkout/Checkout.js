@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { UserContext } from '../../App';
+
 import "./Checkout.css"
 const Checkout = () => {
 
@@ -32,9 +33,10 @@ const Checkout = () => {
             .then(response => response.json())
             .then(data => {
                 if (data) {
-                    alert('order placed successfully')
+                    alert("Product Added successfully!!!!")
                 }
                 // console.log(data)
+                console.log(alert)
             })
 
     }

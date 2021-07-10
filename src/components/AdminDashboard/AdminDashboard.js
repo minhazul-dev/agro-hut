@@ -37,7 +37,7 @@ const AdminDashboard = () => {
                 if (response) {
                     alert('Product Deleted successfully')
                 }
-                console.log('deleted successfully', results);
+                // console.log('deleted successfully', results);
             })
         // console.log('btn clicked', id);
     }
@@ -46,7 +46,13 @@ const AdminDashboard = () => {
     const [isAdmin, setIsAdmin] = useState(false)
     const [loggedInUser] = useContext(UserContext)
     useEffect(() => {
-        fetch(`https://thawing-fjord-24286.herokuapp.com/isAdmin?email=${loggedInUser.email}`)
+        fetch(`https://thawing-fjord-24286.herokuapp.com/isAdmin?email=${loggedInUser.email}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                authorization: `Bearer ${sessionStorage.getItem('token')}`
+            }
+        })
             .then(response => response.json())
             .then(data => setIsAdmin(data))
     }, [loggedInUser.email])
