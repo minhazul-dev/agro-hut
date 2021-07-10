@@ -19,7 +19,8 @@ const Login = () => {
     const location = useLocation();
     const { from } = location.state || { from: { pathname: "/" } };
     const provider = new firebase.auth.GoogleAuthProvider();
-    const fbProvider = new firebase.auth.FacebookAuthProvider();
+    // const fbProvider = new firebase.auth.FacebookAuthProvider();
+
     const handleSignIn = () => {
         firebase.auth().signInWithPopup(provider)
             .then(res => {
@@ -41,30 +42,31 @@ const Login = () => {
             });
     }
 
-    const handleFbSignIn = () => {
-        firebase
-            .auth()
-            .signInWithPopup(fbProvider)
-            .then((result) => {
-                var credential = result.credential;
-                var user = result.user;
-                var accessToken = credential.accessToken;
-                console.log('fb user', user);
-                // setLoggedInUser
 
-            })
-            .catch((error) => {
+    // const handleFbSignIn = () => {
+    //     firebase
+    //         .auth()
+    //         .signInWithPopup(fbProvider)
+    //         .then((result) => {
+    //             var credential = result.credential;
+    //             var user = result.user;
+    //             var accessToken = credential.accessToken;
+    //             console.log('fb user', user);
+    //             // setLoggedInUser
 
-                var errorCode = error.code;
-                var errorMessage = error.message;
+    //         })
+    //         .catch((error) => {
 
-                var email = error.email;
+    //             var errorCode = error.code;
+    //             var errorMessage = error.message;
 
-                var credential = error.credential;
+    //             var email = error.email;
 
-                console.log(errorCode, errorMessage, email, credential);
-            });
-    }
+    //             var credential = error.credential;
+
+    //             console.log(errorCode, errorMessage, email, credential);
+    //         });
+    // }
 
     return (
 
@@ -74,11 +76,11 @@ const Login = () => {
                 <div className="demo-content">
                     <h3 className="mb-4">Please Continue with <b>GOOGLE</b> or <b>FACEBOOK</b> For further Process</h3>
                     <div className="nshare">
-                        <a onClick={handleFbSignIn} className="nshare-item nshare-fb" href="#">
+                        <a className="nshare-item nshare-fb" href="#">
 
                             <FontAwesomeIcon className="icons" icon={faFacebook} size='2x' />
                         </a>
-                        <a onClick={handleSignIn} className="nshare-item nshare-tt" href="#">
+                        <a onClick={handleSignIn} className="nshare-item nshare-tt" href="">
                             <FontAwesomeIcon className="icons" icon={faGoogle} size='2x' />
                         </a>
                         {/* <a className="nshare-item nshare-pt" href="#">
