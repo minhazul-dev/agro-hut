@@ -46,16 +46,11 @@ const AdminDashboard = () => {
     const [isAdmin, setIsAdmin] = useState(false)
     const [loggedInUser] = useContext(UserContext)
     useEffect(() => {
-        fetch(`https://thawing-fjord-24286.herokuapp.com/isAdmin?email=${loggedInUser.email}`, {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                authorization: `Bearer ${sessionStorage.getItem('token')}`
-            }
-        })
+        fetch(`https://thawing-fjord-24286.herokuapp.com/isAdmin?email=${loggedInUser.email}`)
             .then(response => response.json())
             .then(data => setIsAdmin(data))
     }, [loggedInUser.email])
+    console.log(isAdmin);
     console.log(isAdmin);
 
     return (

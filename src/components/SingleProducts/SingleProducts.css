@@ -3,7 +3,7 @@
   font-family: "Work Sans", sans-serif;
   text-align: center;
   transition: all 0.3s ease 0s;
-  border: 1px solid #1868ae;
+  /* border: 1px solid #1868ae; */
   margin-bottom: 15px;
 }
 .product-grid:hover {
