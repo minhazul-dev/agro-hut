@@ -6,7 +6,10 @@ import './Login.css'
 import { UserContext } from '../../App';
 import { useHistory, useLocation } from 'react-router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebook, faGoogle, faGooglePlay } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faGoogle } from '@fortawesome/free-brands-svg-icons';
+
+
+
 if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
 }
@@ -19,7 +22,7 @@ const Login = () => {
     const location = useLocation();
     const { from } = location.state || { from: { pathname: "/" } };
     const provider = new firebase.auth.GoogleAuthProvider();
-    // const fbProvider = new firebase.auth.FacebookAuthProvider();
+    const fbProvider = new firebase.auth.FacebookAuthProvider();
 
     const handleSignIn = () => {
         firebase.auth().signInWithPopup(provider)
@@ -27,46 +30,46 @@ const Login = () => {
                 const { displayName, photoURL, email } = res.user;
                 const signedInUser = { name: displayName, email: email, image: photoURL }
                 setLoggedInUser(signedInUser);
-                // storeAuthToken();
+                storeAuthToken();
                 history.replace(from)
             })
 
 
     }
-    // const storeAuthToken = () => {
-    //     firebase.auth().currentUser.getIdToken(true)
-    //         .then(function (idToken) {
-    //             sessionStorage.setItem('token', idToken)
-    //         }).catch(function (error) {
-    //             // Handle error
-    //         });
-    // }
+    const storeAuthToken = () => {
+        firebase.auth().currentUser.getIdToken(true)
+            .then(function (idToken) {
+                sessionStorage.setItem('token', idToken)
+            }).catch(function (error) {
+                // Handle error
+            });
+    }
 
 
-    // const handleFbSignIn = () => {
-    //     firebase
-    //         .auth()
-    //         .signInWithPopup(fbProvider)
-    //         .then((result) => {
-    //             var credential = result.credential;
-    //             var user = result.user;
-    //             var accessToken = credential.accessToken;
-    //             console.log('fb user', user);
-    //             // setLoggedInUser
+    const handleFbSignIn = () => {
+        firebase
+            .auth()
+            .signInWithPopup(fbProvider)
+            .then((result) => {
+                var credential = result.credential;
+                var user = result.user;
+                var accessToken = credential.accessToken;
+                console.log('fb user', user);
+                // setLoggedInUser
 
-    //         })
-    //         .catch((error) => {
+            })
+            .catch((error) => {
 
-    //             var errorCode = error.code;
-    //             var errorMessage = error.message;
+                var errorCode = error.code;
+                var errorMessage = error.message;
 
-    //             var email = error.email;
+                var email = error.email;
 
-    //             var credential = error.credential;
+                var credential = error.credential;
 
-    //             console.log(errorCode, errorMessage, email, credential);
-    //         });
-    // }
+                console.log(errorCode, errorMessage, email, credential);
+            });
+    }
 
     return (
 
@@ -76,7 +79,7 @@ const Login = () => {
                 <div className="demo-content">
                     <h3 className="mb-4">Please Continue with <b>GOOGLE</b> or <b>FACEBOOK</b> For further Process</h3>
                     <div className="nshare">
-                        <a className="nshare-item nshare-fb" href="#">
+                        <a onClick={handleFbSignIn} className="nshare-item nshare-fb" href="#">
 
                             <FontAwesomeIcon className="icons" icon={faFacebook} size='2x' />
                         </a>
