@@ -13,6 +13,7 @@ import Login from './components/Login/Login';
 import { createContext, useState } from 'react';
 import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
 import SpecificOrders from './components/SpecificOrders/SpecificOrders';
+import PrivacyPolicy from './components/PrivacyPolicy/PrivacyPolicy';
 import AdminLoginForm from './components/AdminLoginForm/AdminLoginForm';
 import AdminDashboard from './components/AdminDashboard/AdminDashboard';
 import ManageProducts from './components/ManageProducts/ManageProducts';
@@ -63,6 +64,9 @@ function App() {
             <PrivateRoute path="/myOrders">
               <SpecificOrders />
             </PrivateRoute>
+            <Route path="/privacyPolicy">
+              <PrivacyPolicy />
+            </Route>
           </Switch>
         </Router>
       </UserContext.Provider>
