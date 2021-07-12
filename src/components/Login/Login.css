@@ -1,5 +1,5 @@
 /* main */
-.login-block {
+/* .login-block {
   background-color: #f2f7fb;
 }
 
@@ -98,6 +98,8 @@
   color: #545454;
   background-color: #ffffff;
   box-shadow: 0 1px 2px 1px #ddd;
+  height: 80px;
+  width: 265px;
 }
 
 .or-container {
@@ -117,4 +119,169 @@
   flex-grow: 1;
   margin: 0 15px;
   text-align: center;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px),
+  (max-width: 767px) {
+  .loginText {
+    text-align: center;
+  }
+}
+*/
+
+/* .classOflogincontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+@media only screen and (min-width: 768px) and (max-width: 991px),
+  (max-width: 767px) {
+  .facebookButton {
+    margin-top: 55px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px),
+  (max-width: 767px) {
+  .googlefbbuttoncontainer {
+    text-align: center;
+  }
+}
+
+.marginogtextlogin {
+  margin-top: 250px;
+}
+/* for button */
+.loginButtonsectionmain {
+  margin: auto;
+  text-align: center;
+  padding-top: 10em;
+}
+.common-btn {
+  position: relative;
+  padding: 15px;
+  width: 90%;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  font-family: "Gotham Medium", sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  max-width: 20em;
+  border-radius: 3em;
+  border: none;
+  color: #fff;
+  overflow: hidden;
+  background-color: transparent;
+}
+.common-btn:active {
+  transform: scale(0.8);
+}
+.common-btn.blue {
+  background-color: #0053b7;
+}
+.common-btn.blue:hover {
+  color: #fff;
+  z-index: 3;
+  transition-delay: 1s;
+}
+.common-btn.blue:before {
+  content: "";
+  position: absolute;
+  left: 60px;
+  top: 50%;
+  transform: translateY(-50%) scale(0.6);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  z-index: 1;
+  transition-property: left, transform;
+  transition-delay: 0s, 0s;
+  transition-duration: 1s, 0.5s;
+  opacity: 0;
+}
+.common-btn.blue:hover:before {
+  left: 10px;
+  transform: translateY(-50%) scale(50);
+  transition-delay: 0s, 1s;
+  opacity: 1;
+  background: #fb6b15;
+  z-index: -1;
+}
+.common-btn.blue:after {
+  content: "";
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%) scale(0.6);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  z-index: 1;
+  transition-property: right, transform;
+  transition-delay: 0s, 0s;
+  transition-duration: 1s, 0.5s;
+  opacity: 0;
+}
+.common-btn.blue:hover:after {
+  right: 10px;
+  transform: translateY(-50%) scale(50);
+  transition-delay: 0s, 1s;
+  opacity: 1;
+  background: #fb6b15;
+  z-index: -1;
+}
+.common-btn.orange {
+  background-color: #fb6b15;
+}
+.common-btn.orange:hover {
+  color: #fff;
+  z-index: 3;
+  transition-delay: 1s;
+}
+.common-btn.orange:before {
+  content: "";
+  position: absolute;
+  left: 60px;
+  top: 50%;
+  transform: translateY(-50%) scale(0.6);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  z-index: 1;
+  transition-property: left, transform;
+  transition-delay: 0s, 0s;
+  transition-duration: 1s, 0.5s;
+  opacity: 0;
+}
+.common-btn.orange:hover:before {
+  left: 10px;
+  transform: translateY(-50%) scale(50);
+  transition-delay: 0s, 1s;
+  opacity: 1;
+  background: #0054b7;
+  z-index: -1;
+}
+.common-btn.orange:after {
+  content: "";
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%) scale(0.6);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  z-index: 1;
+  transition-property: right, transform;
+  transition-delay: 0s, 0s;
+  transition-duration: 1s, 0.5s;
+  opacity: 0;
+}
+.common-btn.orange:hover:after {
+  right: 10px;
+  transform: translateY(-50%) scale(50);
+  transition-delay: 0s, 1s;
+  opacity: 1;
+  background: #0054b7;
+  z-index: -1;
 }

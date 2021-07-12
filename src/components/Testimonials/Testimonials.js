@@ -14,11 +14,11 @@ const Testimonials = () => {
 
     return (
 
-        <section className="gestimonials" id="reviews">
+        <section className="gestimonials" id="reviews ">
             <div className="testimonials-clean">
                 <div className="container">
                     <div className="intro">
-                        <h2 className="text-center"> Recent Reviews</h2>
+                        <h2 className="text-center mt-5"> Recent Reviews</h2>
                         <p className="text-center">Our customers love us! Read what they have to say below. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae.</p>
                     </div>
                     <div className="row people">
