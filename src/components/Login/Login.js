@@ -51,9 +51,12 @@ const Login = () => {
         firebase
             .auth()
             .signInWithPopup(fbProvider)
-            .then((result) => {
-                var credential = result.credential;
-                var user = result.user;
+            .then((res) => {
+                const { displayName, photoURL, email } = res.user;
+                const signedInUser = { name: displayName, email: email, image: photoURL }
+                setLoggedInUser(signedInUser);
+                var credential = res.credential;
+                var user = res.user;
                 var accessToken = credential.accessToken;
                 console.log('fb user', user);
                 // setLoggedInUser
