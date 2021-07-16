@@ -22,8 +22,8 @@ const Login = () => {
     const location = useLocation();
     const { from } = location.state || { from: { pathname: "/" } };
 
-    const fbProvider = new firebase.auth.FacebookAuthProvider();
-    const provider = new firebase.auth.GoogleAuthProvider();
+    const provider = new firebase.auth.FacebookAuthProvider();
+    // const provider = new firebase.auth.GoogleAuthProvider();
 
     const handleSignIn = () => {
         firebase.auth().signInWithPopup(provider)
@@ -47,34 +47,34 @@ const Login = () => {
     // }
 
 
-    const handleFbSignIn = () => {
-        firebase
-            .auth()
-            .signInWithPopup(fbProvider)
-            .then(res => {
-                const { displayName, photoURL, email } = res.user;
-                const fbSignedInUser = { name: displayName, email: email, image: photoURL }
-                setLoggedInUser(fbSignedInUser);
-                var credential = res.credential;
-                var user = res.user;
-                var accessToken = credential.accessToken;
-                history.replace(from)
-                console.log('fb user', user);
-                // setLoggedInUser
+    // const handleFbSignIn = () => {
+    //     firebase
+    //         .auth()
+    //         .signInWithPopup(fbProvider)
+    //         .then(res => {
+    //             const { displayName, photoURL } = res.user;
+    //             const fbSignedInUser = { name: displayName, image: photoURL }
+    //             setLoggedInUser(fbSignedInUser)
+    //             var credential = res.credential;
+    //             var user = res.user;
+    //             // var accessToken = credential.accessToken;
+    //             // history.replace(from)
+    //             console.log('fb user', user);
 
-            })
-            .catch((error) => {
 
-                var errorCode = error.code;
-                var errorMessage = error.message;
+    //         })
+    //         .catch((error) => {
 
-                var email = error.email;
+    //             var errorCode = error.code;
+    //             var errorMessage = error.message;
 
-                var credential = error.credential;
+    //             // var email = error.email;
 
-                console.log(errorCode, errorMessage, email, credential);
-            });
-    }
+    //             var credential = error.credential;
+
+    //             console.log(errorCode, errorMessage, credential);
+    //         });
+    // }
 
     return (
 
@@ -88,7 +88,7 @@ const Login = () => {
             <br />
             <br />
 
-            <button onClick={handleFbSignIn} class="common-btn blue">Continue with Facebook</button>
+            {/* <button onClick={handleFbSignIn} class="common-btn blue">Continue with Facebook</button> */}
 
 
 
