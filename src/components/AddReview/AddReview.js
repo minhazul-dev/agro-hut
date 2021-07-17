@@ -9,7 +9,10 @@ const AddReview = () => {
     const onSubmit = data => {
         alert("Review Added successfully!!!!");
         console.log(data)
+
         const reviewData = {
+            date: new Date(),
+            // date: data.lastModifiedDate,
             name: data.name,
             location: data.location,
             image: imageUrl,

@@ -32,6 +32,7 @@ const Testimonials = () => {
                                 <div className="author"><img className="rounded-circle" src={review.image} />
                                     <h5 className="name">{review.name}</h5>
                                     <p className="title text-primary">{review.location}</p>
+                                    <p className="title text-primary">{review.date}</p>
                                 </div>
                             </div>)
 
