@@ -243,7 +243,7 @@ const AdminDashboard = () => {
                                     reviews.map((review) => <div className="card__row">
                                         <div className="card__icon"><i className="fas fa-book" /></div>
                                         <div className="card__time">
-                                            <div>{review.date}</div>
+                                            <div>{moment(review.date).format('MMMM Do YYYY, h:mm:ss a')}</div>
                                         </div>
                                         <div className="card__detail">
                                             <div className="card__source text-bold">{review.name}</div>

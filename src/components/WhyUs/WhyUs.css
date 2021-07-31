@@ -1,0 +1,78 @@
+.page {
+  font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+  margin-top: 50px;
+  padding: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.62;
+  color: #59666b;
+}
+.page__title {
+  text-align: center;
+  font-size: 35px;
+}
+.page__works-section {
+  background: white;
+}
+.page__works-section__wrapper {
+  margin-top: 86px;
+}
+.page__works-section__card {
+  border-radius: 11px;
+  background-color: #fff;
+  box-shadow: -5px 10px 57px 0 #e3e8fa;
+  padding: 52px 20px 20px;
+  text-align: center;
+  position: relative;
+  height: 265px;
+}
+.page__works-section__card__circle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  background-color: rgba(0, 255, 170, 0.1);
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  display: inline-block;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+}
+.page__works-section__card__circle__inside {
+  width: 90px;
+  height: 90px;
+  background-image: linear-gradient(to bottom right, #00e49e, #98f0d6);
+  border-radius: 100%;
+  position: absolute;
+  display: table;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 5%);
+}
+.page__works-section__card__circle__inside__icon {
+  display: table-cell;
+  vertical-align: middle;
+  color: white;
+}
+.page__works-section__card__circle__inside__icon--fontawesome {
+  font-size: 35px;
+}
+.page__works-section__card__title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 5% 0;
+}
+.page__works-section__card__description {
+  margin: 5% 0;
+}
+
+.layout-center {
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px),
+  (max-width: 767px) {
+  .page__works-section__wrapper {
+    padding: 40px;
+  }
+}

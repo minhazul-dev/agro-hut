@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Testimonials.css"
-
+import moment from 'moment';
 const Testimonials = () => {
 
     const [reviews, setReviews] = useState([])
@@ -32,7 +32,7 @@ const Testimonials = () => {
                                 <div className="author"><img className="rounded-circle" src={review.image} />
                                     <h5 className="name">{review.name}</h5>
                                     <p className="title text-primary">{review.location}</p>
-                                    <p className="title text-primary">{review.date}</p>
+                                    <p className="title text-primary">{moment(review.date).format('MMMM Do YYYY, h:mm:ss a')}</p>
                                 </div>
                             </div>)
 

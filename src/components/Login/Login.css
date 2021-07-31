@@ -287,71 +287,41 @@
 } */
 
 /* //// the second one */
-.marginofcont {
-  margin: 180px;
-}
-.mainofadminloginpage,
-.container-fluidofLoginpage {
-  height: 100%;
-}
-#panel-left {
-  display: flex !important;
-  align-items: center;
-  background-color: #394867;
-}
-#panel-right {
-  display: flex !important;
-  align-items: center;
-  background-color: #f1f6f9;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500;1,700&display=swap");
+.mainofloginjs {
+  background-color: #e6e8fa;
+  height: 100vh;
 }
 
-.h1oflogin {
-  color: #fff;
-  font-size: 40px;
-  font-weight: 500;
-}
-.h2oflogin {
-  color: #14274e;
-  font-size: 40px;
-  font-weight: 700;
+.login-card {
+  background-color: #fff;
+  padding: 30px;
+  margin-top: 100px;
+  font-family: "Roboto", sans-serif;
+  border-radius: 5px;
 }
 
-.description {
-  color: #fff;
-  font-size: 24px;
-  font-weight: 400;
+.form-input {
+  width: 100%;
+  height: 60px;
+  padding-left: 15px;
+  border-radius: 5px;
+  border: 1px solid #5944a6;
+  background-color: #d4dbf5;
 }
 
-#panel-left .logo-container svg {
-  width: 220px;
+input:focus {
+  border: 2px solid #5944a6;
 }
 
-#panel-right form input {
-  background-color: unset;
-  border: 0;
-  border-bottom: 2px solid #394867;
-  border-radius: 0;
-  font-weight: 400;
+.loginbtn {
+  background-color: #7638c2;
+  border-color: #7638c2;
+  width: 100%;
+  height: 40px;
 }
 
-.buttonoflogin {
-  border: 0 !important;
-  border-radius: 50px !important;
-  background-color: #14274e !important;
-  padding: 15px 40px !important;
-  color: #fff !important;
-  font-weight: 400 !important;
-}
-
-.linksofloginlasta a {
-  color: #14274e;
-}
-
-@media only screen and (max-width: 767px) {
-  #panel-left {
-    display: flex;
-  }
-  .i {
-    padding-top: 35px;
-  }
+.loginbtn:hover {
+  background-color: #492378;
+  border-color: #492378;
 }
